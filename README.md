@@ -1,6 +1,7 @@
 # transcriber
 
-Nov 22 2016.
+Started Oct 18 2016.
+Finished Nov 22 2016.
 
 Transcriber is able to take in microphone input and output a very crude sheet music approximation to the detected frequencies. This program is still very much in it's infancy and is unable to detect rhythms, let alone remove overtones. 
 
