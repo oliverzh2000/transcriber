@@ -1,15 +1,12 @@
 # transcriber
 
-Started Oct 18 2016.
-Finished Nov 22 2016.
+Transcriber is able to take in microphone input and output a very crude sheet music approximation to the detected frequencies. This program is still very much in it's infancy and is unable to detect rhythms or perform overtone removal.
 
-Transcriber is able to take in microphone input and output a very crude sheet music approximation to the detected frequencies. This program is still very much in it's infancy and is unable to detect rhythms, let alone remove overtones. 
-
-At the heart of this program is the discrete fourier transform. It only job is to break down the microphone input into its constituent frequencies. Array processing from numpy is used to make this happen efficiently. 
+At the heart of this program is the discrete fourier transform (DFT). Its job is to transform microphone audio in the time domain (not useful for our purposes) into the frequency domain. Array processing from Numpy is used to make this happen efficiently. 
 
 Pygame is used to render the results of the spectrogram on the screen with a black-red-yellow-white colormap.
 
-For note detection the user must manually adjust thresholds for the minimum value and also the time-derivative of frequency intensities.
+For most accurate note detection, there are thresholds for the both minimum value and the time-derivative of frequency intensities that need to be calibrated (slightly) depending on the nature of the sound source. Having a threshold for time-derivative of frequency intensities ensures that one continuous tone is not detected as multiple notes being played in rapid succession.
 
 Once the notes have been detected, the mingus library formats the detected notes into a file compatible with lilypond, which is an external application that does the sheet music engraving to pdf format.
 
