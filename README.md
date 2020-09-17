@@ -10,7 +10,7 @@ At the heart of this program is the discrete fourier transform (DFT). Its job is
 
 The spectrogram is rendered onto the screen with a black-red-yellow-white colormap.
 
-For most accurate note detection, there are thresholds for the both minimum value and the time-derivative of frequency intensities that need to be calibrated (slightly) depending on the nature of the sound source. Having a threshold for time-derivative of frequency intensities ensures that one continuous tone is not detected as multiple notes being played in rapid succession. 
+For most accurate note detection, there are thresholds for the both minimum value and the time-derivative of frequency intensities that need to be calibrated (slightly) depending on the nature of the sound source. Having a threshold for time-derivative of frequency intensities ensures that one continuous note is not detected as multiple notes being played in rapid succession. 
 
 This program was designed and calibrated to work best for piano, as the piano is the instrument dearest to me. 
 
