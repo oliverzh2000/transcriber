@@ -1,4 +1,4 @@
-# transcriber
+# Transcriber
 
 Transcriber is able to take in microphone input and output a (crude) sheet music approximation to the detected frequencies. 
 
